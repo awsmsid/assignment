@@ -49,9 +49,9 @@ Signup API
 $ POST http://localhost:3000/auth/
   
   {
-	  "email": "test8@email.com",
-	  "password": "password",
-	  "password_confirmation": "password"
+		"email": "test8@email.com",
+		"password": "password",
+		"password_confirmation": "password"
 	}
 
 	Response:
