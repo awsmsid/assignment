@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  # get 'follows/create'
   mount_devise_token_auth_for 'User', at: 'auth'
   resources :follows, only: %i[create search] do
     collection do
@@ -9,5 +8,10 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :posts, only: %i[create]
+  resources :posts, only: %i[show create]
+  resources :users, only: %i[search] do
+    collection do
+      get 'search'
+    end
+  end
 end

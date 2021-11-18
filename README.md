@@ -1,24 +1,44 @@
-# README
+# Assignment
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an assignent.
 
-Things you may want to cover:
+## Getting started
 
-* Ruby version
+To get started with the app, first clone the repo and `cd` into the directory:
 
-* System dependencies
+```
+$ git clone https://github.com/awsmsid/assignment.git
+$ cd assignment
+```
 
-* Configuration
+Then use the ruby-3.0.0:
 
-* Database creation
+```
+$ rvm use 3.0.0
+```
 
-* Database initialization
+Install the needed gems:
 
-* How to run the test suite
+```
+$ bundle install
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Next, create db and migrate the database:
 
-* Deployment instructions
+```
+$ rails db:create db:migrate
+```
 
-* ...
+run the app in a local server:
+
+```
+$ rails server
+```
+
+Authorization Headers
+
+```
+$ access-token: <access-token>
+  client: <client-id>
+  uid: <uid>
+```
